@@ -1,0 +1,236 @@
+/* pages/calculator/calculator.wxss */
+
+/* 总页面样式 */
+.root-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.root-container-light {
+    /* 页面背景颜色 */
+    background-color: #EEEEEE;
+}
+
+.root-container-dark {
+    /* 页面背景颜色 */
+    background-color: #1E2429;
+}
+
+/* 计算器总体 */
+.calculator-body {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    margin-bottom: 56rpx;
+    border-radius: 20px;
+}
+
+.calculator-body-light {
+    background-color: #EEEEEE;
+    box-shadow: -8px -8px 16px -10px rgba(255, 255, 255, 1),
+        8px 8px 16px -10px rgba(0, 0, 0, .15);
+}
+
+.calculator-body-dark {
+    background: #1E2429;
+    box-shadow: 20px 20px 60px #1a1f23,
+        -20px -20px 60px #23292f;
+}
+
+/* 显示器总体样式 */
+.monitor-container {
+    padding-left: 48rpx;
+    padding-right: 48rpx;
+    padding-top: 48rpx;
+    padding-bottom: 12rpx;
+}
+
+.monitor {
+    position: relative;
+    height: 32vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* 显示屏圆角 */
+    border-radius: 15rpx;
+}
+
+.monitor-light {
+    /* 显示屏背景颜色 */
+    background-color: #C2CEB5;
+}
+
+.monitor-dark {
+    background-color: #3B4D5E;
+}
+
+/* 日间模式/夜间模式icon */
+.style-switch-image {
+    position: absolute;
+    top: 12rpx;
+    left: 12rpx;
+    display: inline-block;
+    overflow: hidden;
+    width: 32rpx;
+    height: 32rpx;
+    text-align: center;
+}
+
+/* 历史样式 */
+.history {
+    text-align: right;
+    margin-bottom: 8rpx;
+    margin-top: 8rpx;
+}
+
+/* 历史显示框的样式 */
+.history-items-container {
+    width: 100%;
+    /* 设置最大高度, 防止历史过多超出显示屏
+       指定最大宽度而非宽度是因为使用后者历史从上往下增加
+       在wxml中指定宽度也是从上往下增加 */
+    max-height: 230rpx;
+}
+
+/* 历史文字样式 */
+.history-items {
+    /* 历史文字大小 */
+    font-size: 12px;
+    font-family: Helvetica;
+    padding-right: 25rpx;
+}
+
+.history-items-light {
+    /* 结果上面的历史文字颜色 */
+    color: #8C9783;
+}
+
+.history-items-dark {
+    /* 结果上面的历史文字颜色 */
+    color: #536ca8bb;
+}
+
+/* 当前计算式样式 */
+.current-formula {
+    font-size: 16px;
+    font-family: Helvetica;
+    padding-right: 25rpx;
+    padding-top: 20rpx;
+}
+
+.current-formula-light {
+    color: #6D7A77;
+}
+
+.current-formula-dark {
+    color: #6a7ad6;
+}
+
+/* 显示屏分割线样式 */
+.div-line {
+    align-self: center;
+    width: 90%;
+    height: 1px;
+}
+
+.div-line-light {
+    background: #acb8a4b2;
+}
+
+.div-line-dark {
+    background: #4c6175;
+}
+
+
+/* 当前计算结果 */
+.current-result {
+    text-align: right;
+    font-size: 48px;
+    padding-right: 20rpx;
+    padding-top: 5rpx;
+    padding-bottom: 5rpx;
+    font-family: Helvetica;
+}
+
+.current-result-light {
+    color: #474D4E;
+}
+
+.current-result-dark {
+    color: #5176FB;
+}
+
+/* 按键布局 */
+.button-group {
+    --button-width: 150rpx;
+    --button-height: 150rpx;
+
+    /* margin-top: 160rpx; */
+    padding: 24rpx;
+
+    display: grid;
+    grid-template-areas:
+        "ac plus-minus percent divide"
+        "seven eight nine multiply"
+        "four five six subtract"
+        "one two three add"
+        "zero zero dot equal";
+    grid-template-columns: repeat(4, var(--button-width));
+    grid-template-rows: repeat(5, var(--button-height));
+    justify-content: center;
+}
+
+/* 每个按键样式 */
+.button-group view {
+    margin: 8px;
+    padding: 0;
+    border: 0;
+
+    /* 使用display: block导致按钮文字不居中 */
+    /* display: block; */
+
+    /* 下面的3行实现按钮文字居中, 这里在wxml中通过style指定, 否则切换到夜间主题居中会失效 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    outline: none;
+    border-radius: calc(var(--button-height) / 2);
+    font-size: 12px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+
+.button-light {
+    /* 按键内文字颜色 */
+    color: #999999;
+    /* 按键背景颜色 */
+    background: linear-gradient(135deg, rgba(233, 233, 233, 1) 0%, rgba(244, 244, 244, 1) 100%);
+    /* 按键阴影（拟态风格关键代码） */
+    box-shadow: -4px -4px 10px -8px rgba(255, 255, 255, 1), 4px 4px 10px -8px rgba(0, 0, 0, .3);
+}
+
+/* 按键按下样式 */
+.button-light:active {
+    box-shadow: -4px -4px 10px -8px rgba(255, 255, 255, 1) inset, 4px 4px 10px -8px rgba(0, 0, 0, .3) inset;
+}
+
+.button-dark {
+    /* 按键内文字颜色 */
+    color: #EAECEC;
+    /* 按键背景颜色 */
+    background: linear-gradient(145deg, #1b2025, #20272c);
+    /* 按键阴影（拟态风格关键代码） */
+    box-shadow: 5px 5px 15px #1b2025,
+        -5px -5px 15px #21282d;
+}
+
+/* 按键按下样式 */
+.button-dark:active {
+    box-shadow: 5px 5px 15px #1b2025 inset, -5px -5px 15px #21282d inset;
+}
