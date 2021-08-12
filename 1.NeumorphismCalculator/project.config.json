@@ -41,8 +41,8 @@
     },
     "compileType": "miniprogram",
     "libVersion": "2.19.1",
-    "appid": "wx74d796f6fd53e53a",
-    "projectname": "NeumorphismCalculator",
+    "appid": "",
+    "projectname": "NeumorphicCalculator",
     "debugOptions": {
         "hidedInDevtools": []
     },
