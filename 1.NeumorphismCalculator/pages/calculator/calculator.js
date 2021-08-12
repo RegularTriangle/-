@@ -29,6 +29,11 @@ import {
   
     // 切换夜间模式
     changeStyle() {
+      wx.showToast({
+        title: this.data.skinStyle === 'light' ? '\n深色模式' : '\n浅色模式',
+        duration: 500,
+        image: this.data.skinStyle === 'light' ? "../../static/dark_large.png" : "../../static/light_large.png"
+      });
       this.setData({
         skinStyle: this.data.skinStyle === 'light' ? 'dark' : 'light',
         styleSwitchImageUrl: this.data.styleSwitchImageUrl === "../../static/light.png" ? "../../static/dark.png" : "../../static/light.png",
