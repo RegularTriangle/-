@@ -1,6 +1,6 @@
 # 微信小程序实现拟态简单计算器
 
-## 演示
+## 效果
 ![](https://github.com/RegularTriangle/MiniProgramLearning/blob/main/1.NeumorphismCalculator/demo/demo.jpg?raw=true)
 
 ## 知识点
