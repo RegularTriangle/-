@@ -1,5 +1,8 @@
 # 微信小程序实现拟态简单计算器
 
+## 演示
+![](https://github.com/RegularTriangle/MiniProgramLearning/blob/main/1.NeumorphismCalculator/demo/demo.jpg?raw=true)
+
 ## 知识点
 - 【css】【html】实现新拟态风格UI
 - 【微信小程序】动态更改顶部导航栏背景颜色等
