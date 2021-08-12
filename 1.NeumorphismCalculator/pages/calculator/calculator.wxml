@@ -1,0 +1,55 @@
+<!--pages/calculator/calculator.wxml-->
+<view class="root-container root-container-{{skinStyle}}">
+    <view class='calculator-body calculator-body-{{skinStyle}}'>
+        <!-- 显示器 -->
+        <view class="monitor-container">
+            <view class="monitor monitor-{{skinStyle}}">
+                <image class='style-switch-image' src='{{styleSwitchImageUrl}}' mode='aspectFit' bindtap='changeStyle'>
+                </image>
+                <!-- 计算历史 -->
+                <view class="history">
+                    <scroll-view class="history-items-container" scroll-y="true" scroll-with-animation="true"
+                        scroll-into-view="{{scrollToLast}}">
+                        <view class="history-items history-items-{{skinStyle}}" wx:key="index" wx:for="{{historyList}}"
+                            id="history{{index}}">
+                            {{item}}</view>
+                    </scroll-view>
+                    <view class="current-formula current-formula-{{skinStyle}}">{{currentFormula}}</view>
+                </view>
+
+                <!-- 分割线 -->
+                <view class="div-line div-line-{{skinStyle}}"></view>
+
+                <!-- 当前计算结果 -->
+                <view class="current-result current-result-{{skinStyle}}">{{currentResult}}</view>
+            </view>
+        </view>
+
+        <view class="button-group" style="grid-area: button-group">
+            <!-- 功能按钮 -->
+            <view class="button-{{skinStyle}}" style="grid-area: ac" id="ac" bindtap="clear">AC</view>
+            <view class="button-{{skinStyle}}" style="grid-area: plus-minus" id="plus-minus" bindtap="calculateToggle">±
+            </view>
+            <view class="button-{{skinStyle}}" style="grid-area: percent" id="percent" bindtap="calculatePercentage">%
+            </view>
+            <view class="button-{{skinStyle}}" style="grid-area: add" id="+" bindtap="append">+</view>
+            <view class="button-{{skinStyle}}" style="grid-area: subtract" id="-" bindtap="append">- </view>
+            <view class="button-{{skinStyle}}" style="grid-area: multiply" id="×" bindtap="append">× </view>
+            <view class="button-{{skinStyle}}" style="grid-area: divide" id="÷" bindtap="append">÷ </view>
+            <view class="button-{{skinStyle}}" style="grid-area: equal" id="=" bindtap="calculate">=</view>
+            <!-- 数字按钮 -->
+            <view class="button-{{skinStyle}}" bindtap="append" id="0" style="grid-area: zero">0</view>
+            <view class="button-{{skinStyle}}" bindtap="append" id="1" style="grid-area: one">1</view>
+            <view class="button-{{skinStyle}}" bindtap="append" id="2" style="grid-area: two">2</view>
+            <view class="button-{{skinStyle}}" bindtap="append" id="3" style="grid-area: three">3</view>
+            <view class="button-{{skinStyle}}" bindtap="append" id="4" style="grid-area: four">4</view>
+            <view class="button-{{skinStyle}}" bindtap="append" id="5" style="grid-area: five">5</view>
+            <view class="button-{{skinStyle}}" bindtap="append" id="6" style="grid-area: six">6</view>
+            <view class="button-{{skinStyle}}" bindtap="append" id="7" style="grid-area: seven">7</view>
+            <view class="button-{{skinStyle}}" bindtap="append" id="8" style="grid-area: eight">8</view>
+            <view class="button-{{skinStyle}}" bindtap="append" id="9" style="grid-area: nine">9</view>
+            <!-- 小数点 -->
+            <view class="button-{{skinStyle}}" bindtap="append" id="." style="grid-area: dot">.</view>
+        </view> <!-- button--group -->
+    </view>
+</view>
