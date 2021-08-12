@@ -200,7 +200,7 @@ import {
       /** ------------------- 下面的处理方式不优雅, 连续使用%可能出现bug ---------------------- */
       // 处理数位避免超出显示器
       // 显示器最多数位
-      var maxShowLen = 10
+      var maxShowLen = 8
       if (Math.abs(result) > Math.pow(10, maxShowLen)) {
         result = result.toExponential()
       }
@@ -222,7 +222,7 @@ import {
       }
       // 结果类似于3.333333333333333
       else if (eIndex == -1 && dotIndex != -1) {
-        if (result.indexOf('-') != -1) {
+        if (result.indexOf('-') == -1) {
           maxShowLen += 1
         }
         result = result.substr(0, maxShowLen)
