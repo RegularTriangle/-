@@ -15,14 +15,23 @@ import {
       styleSwitchImageUrl: "../../static/light.png",
       // 计算历史
       historyList: [],
+      // 当前算式
       equation: '0',
+      // 小数标记
       isDecimalAdded: false,
+      // 是否按下+ - × ÷
       isOperatorAdded: false,
+      // 是否刚刚启动
       isStarted: false,
+      // 当前算式结果
       currentResult: '0',
+      // 当前显示算式
       currentFormula: '',
+      // 历史条目
       historyCount: 0,
+      // 是否按下=
       isEqualAdded: false,
+      // 用于控制历史条码自动滚动到底部
       scrollToLast: `history${0}`
     },
   
@@ -38,6 +47,7 @@ import {
         skinStyle: this.data.skinStyle === 'light' ? 'dark' : 'light',
         styleSwitchImageUrl: this.data.styleSwitchImageUrl === "../../static/light.png" ? "../../static/dark.png" : "../../static/light.png",
       });
+      // 修改顶部导航栏样式
       wx.setNavigationBarColor({
         frontColor: this.data.skinStyle === 'light' ? '#000000' : '#ffffff',
         backgroundColor: this.data.skinStyle === 'light' ? '#EEEEEE' : '#1F252A',
