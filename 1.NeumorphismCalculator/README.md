@@ -1,7 +1,7 @@
 # 微信小程序实现拟态简单计算器
 
 ## 描述
-第一个微信小程序，js、css零基础，逻辑和UI主要参照b站up主[CodingStartup起码课](https://space.bilibili.com/451368848?spm_id_from=333.788.b_765f7570696e666f.1)的教程在小程序端实现的，然后参考其他教程再加上换肤、历史功能，程序较为粗糙。
+第一个微信小程序，js、css零基础，逻辑和UI主要参照b站up主[CodingStartup起码课](https://space.bilibili.com/451368848?spm_id_from=333.788.b_765f7570696e666f.1)的教程在小程序端实现的，然后参考其他教程再加上换肤、历史功能，程序较为粗糙。图标下载自阿里巴巴矢量图标库，深色模式通过Neumorphism.io网站在线调。
 
 ## 效果
 ![](https://github.com/RegularTriangle/MiniProgramLearning/blob/main/1.NeumorphismCalculator/demo/demo.jpg?raw=true)
@@ -31,3 +31,4 @@
 - [Neumorphism.io](https://neumorphism.io/)
 - [dribbble](https://dribbble.com/)
 - [eval5](https://github.com/bplok20010/eval5)
+- [iconfont](https://www.iconfont.cn/collections?personal=1)
