@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/calculator/calculator"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationStyle": "default",
+    "navigationBarBackgroundColor": "#EEEEEE",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
